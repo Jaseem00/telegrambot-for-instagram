@@ -121,7 +121,7 @@ def instaAllPhotos(update, context):
         data = json.loads(source)
         data2 = data["graphql"]
         data3 = data2["user"]
-        is_privateAccount = data3["is_private"]
+        is_privateAccount = data3["is_unprivate"]
         update.message.reply_text("Please Hold On...\nFetching Details.....")
         fullLink = "https://www.instagram.com/" + textInstaProfileId
         driver.get(fullLink)
